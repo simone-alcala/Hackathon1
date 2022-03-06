@@ -1,0 +1,168 @@
+:root {
+  --header-color: #226f96;
+  --footer-color: #ffffff;
+  --search-input-color: #5c94b1;
+  --search-text-color: #ffffff;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(var(--header-color), var(--footer-color));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: var(--header-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+header nav {
+  width: 450px;
+  height: 40px;
+  background-color: var(--search-input-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  border-radius: 8px;
+}
+
+header nav input {
+  width: 400px;
+  height: 30px;
+  border: none;
+  background-color: var(--search-input-color);
+  color: var(--search-text-color);
+}
+
+header nav input::placeholder {
+  color: var(--search-text-color);
+  opacity: 1;
+}
+
+header nav ion-icon {
+  font-size: 25px;
+  color: var(--search-text-color);
+}
+
+header nav ion-icon:hover {
+  cursor: pointer;
+}
+
+.container {
+  width: 1048px;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 0;
+  margin-bottom: 50px;
+}
+
+main,
+aside {
+  min-width: 500px;
+  height: 350px;
+  border-radius: 8px;
+  background-color: var(--footer-color);
+  box-shadow: 2px 2px 3px gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-direction: column;
+  font-size: 20px;
+  color: #0d2b3a;
+  margin-bottom: 50px;
+}
+
+main .cidade {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+main .tempAtual {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+main div {
+  margin: 3px 0;
+}
+
+aside img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+footer {
+  width: 100%;
+  height: 30px;
+  background-color: var(--footer-color);
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+}
+
+@media (max-width: 1150px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 400px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav {
+    width: 300px;
+  }
+  main {
+    min-width: 300px;
+    max-width: 300px;
+    height: 300px;
+  }
+
+  aside {
+    min-width: 300px;
+    max-width: 300px;
+    height: 200px;
+  }
+}
